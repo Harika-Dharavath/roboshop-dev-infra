@@ -10,9 +10,10 @@
 } */
 
 
+
 module "sg" {
   count = length(var.sg_names)
-  source = "git::https://github.com/Harika-Dharavath/terraform-aws-sg.git?ref=main"
+  source = "git::https://github.com/Harika-Dharavath/terraform-aws-vpc.git"
   project_name = var.project_name
   environment = var.environment
   sg_name = var.sg_names[count.index]
